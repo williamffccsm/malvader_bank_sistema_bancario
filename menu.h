@@ -44,7 +44,7 @@ void CABECALHO_MALVADER()
 		printf("		######  #     # #     # #    # \n");
 		printf("\n\n");
 		printf("\n\n*************************************************************\n");
-		printf("************* AQUI O SEU DINHEIRO GANHA FOR«AS! *************\n");
+		printf("************* AQUI O SEU DINHEIRO GANHA FOR√áAS! *************\n");
 		printf("*************************************************************\n\n");
 		printf("\n\n");
 }
@@ -56,7 +56,7 @@ void MENU_PRINCIPAL()
 	{
 		printf("\n\n");
 		printf("Tecle a opcao desejada:\n");
-		printf("[1]. Funcion·rio\n");
+		printf("[1]. Funcion√°rio\n");
 		printf("[2]. Cliente\n");
 		printf("[3]. Sair \n");
 		scanf("%d",&opcao);
@@ -71,7 +71,7 @@ void MENU_PRINCIPAL()
 				exit(1);
 				break;
 			default:
-				printf("Opc„o inv·lida!\n\n");
+				printf("Opc√£o inv√°lida!\n\n");
 				getch();
 				break;								
 		}
@@ -93,7 +93,7 @@ void SENHA_FUN()
 	else 
 	{
 		system("cls");
-		printf("Login ou Senha inv·lido!\n\n");
+		printf("Login ou Senha inv√°lido!\n\n");
 		CABECALHO();
 		MENU_PRINCIPAL();
 		getch();
@@ -103,19 +103,19 @@ void SENHA_FUN()
 void MENU_FUNCIONARIO()
 {	system("color F");
 	printf("**************************************\n");
-	printf("********** MENU FUNCION¡RIO **********\n");
+	printf("********** MENU FUNCION√ÅRIO **********\n");
 	printf("**************************************\n");
 	printf("\n");	
 	int opcao1;
 		do
 		{
-			printf("Tecle a opÁ„o desejada:\n\n");
+			printf("Tecle a op√ß√£o desejada:\n\n");
 			printf("[1]. Abertura de Conta\n");
 			printf("[2]. Encerramento de Conta\n");
 			printf("[3]. Consultar Dados\n");
 			printf("[4]. Alterar Dados\n");
-			printf("[5]. Cadastro de Funcion·rio\n");
-			printf("[6]. Gerar RelatÛrio\n");
+			printf("[5]. Cadastro de Funcion√°rio\n");
+			printf("[6]. Gerar Relat√≥rio\n");
 			printf("[7]. Sair\n");
 			scanf("%d",&opcao1);
 			system("cls");
@@ -138,13 +138,13 @@ void MENU_FUNCIONARIO()
 						MENU_PRINCIPAL();					
 					break;
 				default:
-					printf("Opc„o inv·lida!\n\n");
+					printf("Opc√£o inv√°lida!\n\n");
 					getch();
 					break;																		
 			}		
 		}while(opcao1!=7);			
 }
-//Essa e apenas uma funÁ„o de meu para a criaÁ„o 
+//Essa e apenas uma fun√ß√£o de meu para a cria√ß√£o 
 void ABRE_CONTA()
 {
 	int opcao2;
@@ -154,8 +154,8 @@ void ABRE_CONTA()
 	printf("\n");
 	do
 	{
-		printf("Tecle a opÁ„o desejada:\n\n");
-		printf("[1]. Conta PoupanÁa-CP\n");
+		printf("Tecle a op√ß√£o desejada:\n\n");
+		printf("[1]. Conta Poupan√ßa-CP\n");
 		printf("[2]. Conta Corrente-CC\n");
 		printf("[3]. Voltar \n");
 		scanf("%d",&opcao2);
@@ -169,7 +169,7 @@ void ABRE_CONTA()
 			case 3:MENU_FUNCIONARIO();
 				break;
 			default:
-				printf("Opc„o inv·lida!\n\n");
+				printf("Opc√£o inv√°lida!\n\n");
 				getch();
 				break;	
 		}	
@@ -202,26 +202,26 @@ struct REGISTRO_POUPANCA
 	struct POUPANCA_ENDERECO endereco_cp;
 	int senha_cp;
 };
-// FUN«√O QUE CRIA CONTA DO CLIENTE POUPAN«A.
+// FUN√á√ÉO QUE CRIA CONTA DO CLIENTE POUPAN√áA.
 void CLIENTE_POUPANCA()
 {
 	printf("************************************************\n");
-	printf("********** Abertura de Conta poupanÁa **********\n");
+	printf("********** Abertura de Conta poupan√ßa **********\n");
 	printf("************************************************\n\n");
 	printf("\n");
 	FILE* arquivo_poupanca;
 	struct REGISTRO_POUPANCA registro_cp;
-	arquivo_poupanca=fopen("arquivo_poupanca.txt","ab");//apende  bineri abre uma arquivo novo se n„o existir caso exista ele adiciona no final do arquivo.
+	arquivo_poupanca=fopen("arquivo_poupanca.txt","ab");//apende  bineri abre uma arquivo novo se n√£o existir caso exista ele adiciona no final do arquivo.
 	if(arquivo_poupanca==NULL)
 	{
 		printf("Erro na abertura do arquivo!\n");
 	}
 	else
 	{
-        printf("AgÍncia :\n");
+        printf("Ag√™ncia :\n");
         scanf("%d", &registro_cp.agencia_cp);
         fflush(stdin);
-        printf("N∞ Conta :\n");
+        printf("N¬∞ Conta :\n");
         scanf("%d", &registro_cp.num_conta_cp);
         printf("Nome: :\n");
         fflush(stdin);
@@ -237,13 +237,13 @@ void CLIENTE_POUPANCA()
         printf("Contato :\n");
         fflush(stdin);
         gets(registro_cp.contato_cp);
-        printf("EndereÁo do Cliente:\n");
+        printf("Endere√ßo do Cliente:\n");
         printf("Cep :\n");
         scanf("%d", &registro_cp.endereco_cp.cep_cp);
         printf("Logradouro:\n");
         fflush(stdin);
         gets(registro_cp.endereco_cp.local_cp);
-        printf("N∞ casa:\n");
+        printf("N¬∞ casa:\n");
         scanf("%d", &registro_cp.endereco_cp.num_casa_cp);
         printf("Bairro:\n");
         fflush(stdin);
@@ -264,15 +264,15 @@ void CLIENTE_POUPANCA()
         printf("********** Conta Aberta Com Sucesso **********\n");
         printf("**********************************************\n\n");
         printf("\n");
-        printf("AgÍncia: %d\n", registro_cp.agencia_cp);
-        printf("N∞ Conta: %d\n", registro_cp.num_conta_cp);
+        printf("Ag√™ncia: %d\n", registro_cp.agencia_cp);
+        printf("N¬∞ Conta: %d\n", registro_cp.num_conta_cp);
         printf("Nome: %s\n", registro_cp.nome_cp);
         printf("CPF: %s\n", registro_cp.cpf_cp);
         printf("Data de Nascimento: %02d/%02d/%04d\n", registro_cp.data_cp.dia_cp, registro_cp.data_cp.mes_cp, registro_cp.data_cp.ano_cp);
         printf("Contato: %s\n", registro_cp.contato_cp);
         printf("Cep: %d\n", registro_cp.endereco_cp.cep_cp);
         printf("Logradouro: %s\n", registro_cp.endereco_cp.local_cp);
-        printf("N∞ casa: %d\n", registro_cp.endereco_cp.num_casa_cp);
+        printf("N¬∞ casa: %d\n", registro_cp.endereco_cp.num_casa_cp);
         printf("Bairro: %s\n", registro_cp.endereco_cp.bairro_cp);
         printf("Cidade: %s\n", registro_cp.endereco_cp.cidade_cp);
         printf("Estado: %s\n", registro_cp.endereco_cp.estado_cp);
@@ -322,7 +322,7 @@ struct REGISTRO_CORRENTE
 struct TRANSACAO {
     char tipo[10]; // "Deposito" ou "Saque"
     float valor;
-    char data[20]; // Data da transaÁ„o
+    char data[20]; // Data da transa√ß√£o
 };
 void CLIENTE_CORRENTE()
 {
@@ -332,7 +332,7 @@ void CLIENTE_CORRENTE()
 	printf("\n");
 	FILE* arquivo_corrente;
 	struct REGISTRO_CORRENTE registro_cc;
-	arquivo_corrente=fopen("arquivo_corrente.txt","ab");//apende modo binario abre uma arquivo novo se n„o existir caso exista ele adiciona no final do arquivo.
+	arquivo_corrente=fopen("arquivo_corrente.txt","ab");//apende modo binario abre uma arquivo novo se n√£o existir caso exista ele adiciona no final do arquivo.
 	if(arquivo_corrente==NULL)
 	{
 		printf("Erro na abertura do arquivo!\n");
@@ -342,9 +342,9 @@ void CLIENTE_CORRENTE()
 		printf("Tipo de Conta:\n");
 		fflush(stdin);
 		gets(registro_cc.tipo_conta_cc);
-		printf("AgÍncia :\n");
+		printf("Ag√™ncia :\n");
 		scanf("%d", &registro_cc.agencia_cc);
-		printf("N∞ Conta:\n");
+		printf("N¬∞ Conta:\n");
 		scanf("%d", &registro_cc.num_conta_cc);
 		printf("Limite: \n");
 		scanf("%f", &registro_cc.limite_cc);
@@ -365,13 +365,13 @@ void CLIENTE_CORRENTE()
 		printf("Contato :\n");
 		fflush(stdin);
 		gets(registro_cc.contato_cc);
-		printf("EndereÁo do Cliente:\n");
+		printf("Endere√ßo do Cliente:\n");
 		printf("Cep :\n");
 		scanf("%d",&registro_cc.endereco_cc.cep_cc);
 		printf("Logradouro :\n");
 		fflush(stdin);
 		gets(registro_cc.endereco_cc.local_cc);
-		printf("N∞ casa :\n");
+		printf("N¬∞ casa :\n");
 		scanf("%d", &registro_cc.endereco_cc.num_casacc);		
 		printf("Bairro :\n");
 		fflush(stdin);
@@ -395,8 +395,8 @@ void CLIENTE_CORRENTE()
 		printf("**********************************************\n\n");
 		printf("\n");
 		printf("Tipo de Conta: ",registro_cc.tipo_conta_cc);
-		printf("AgÍncia: %d\n", registro_cc.agencia_cc);
-		printf("N∞ Conta: %d\n", registro_cc.num_conta_cc);
+		printf("Ag√™ncia: %d\n", registro_cc.agencia_cc);
+		printf("N¬∞ Conta: %d\n", registro_cc.num_conta_cc);
 		printf("Limite: %.2f\n", registro_cc.limite_cc);
 		printf("Data de Vencimento: %2d/%2d/%4d\n",registro_cc.venci_cc.venc_dia ,registro_cc.venci_cc.venc_mes ,registro_cc.venci_cc.venc_ano);
 		printf("Saldo: %.2f\n",registro_cc.saldo_cc);
@@ -406,7 +406,7 @@ void CLIENTE_CORRENTE()
 		printf("Contato: %s\n", registro_cc.contato_cc);
 		printf("Cep: %d\n", registro_cc.endereco_cc.cep_cc);
 		printf("Logradouro: %s\n", registro_cc.endereco_cc.local_cc);
-		printf("N∞ casa: %d\n", registro_cc.endereco_cc.num_casacc);
+		printf("N¬∞ casa: %d\n", registro_cc.endereco_cc.num_casacc);
 		printf("Bairro: %s\n", registro_cc.endereco_cc.bairro_cc);
 		printf("Cidade: %s\n", registro_cc.endereco_cc.cidade_cc);
 		printf("Estado: %s\n", registro_cc.endereco_cc.estado_cc);
@@ -415,7 +415,7 @@ void CLIENTE_CORRENTE()
 		system("cls");
 	}
 }
-//CADASTRO DE FUNCION¡RIO
+//CADASTRO DE FUNCION√ÅRIO
 struct NASCIMENTO_FUN 
 {
 	int fun_dia;
@@ -445,12 +445,12 @@ struct DADOS_FUN
 void CADASTRA_FUNCIONARIO()
 {
 	printf("*******************************************\n");
-	printf("********** Cadastrar Funcion·rio **********\n");
+	printf("********** Cadastrar Funcion√°rio **********\n");
 	printf("*******************************************\n\n");
 	printf("\n");
 	FILE* arquivo_funcionario;
 	struct DADOS_FUN dados_fun;
-	arquivo_funcionario=fopen("arquivo_funcionario.txt","ab");//apende modo binario abre uma arquivo novo se n„o existir caso exista ele adiciona no final do arquivo.
+	arquivo_funcionario=fopen("arquivo_funcionario.txt","ab");//apende modo binario abre uma arquivo novo se n√£o existir caso exista ele adiciona no final do arquivo.
 	if(arquivo_funcionario==NULL)
 	{
 		printf("Erro na abertura do arquivo!\n");
@@ -458,7 +458,7 @@ void CADASTRA_FUNCIONARIO()
 	else
 	{
 		fflush(stdin);
-		printf("CodÌgo do funcion·rio: \n");
+		printf("Cod√≠go do funcion√°rio: \n");
 		scanf("%d",&dados_fun.fun_codigo);
 		printf("Novo Qual o cargo:\n ");
 		fflush(stdin);
@@ -474,17 +474,17 @@ void CADASTRA_FUNCIONARIO()
 		scanf("%d",&dados_fun.fun_nasc.fun_dia);
 		scanf("%d",&dados_fun.fun_nasc.fun_mes);
 		scanf("%d",&dados_fun.fun_nasc.fun_ano);
-		printf("Digite o n˙mero de contado: \n");
+		printf("Digite o n√∫mero de contado: \n");
 		fflush(stdin);
 		gets(dados_fun.fun_ctt);
-		printf("EndereÁo do Funcion·rio:\n");
+		printf("Endere√ßo do Funcion√°rio:\n");
 		fflush(stdin);
 		printf("Cep :\n");
 		scanf("%d",&dados_fun.fun_endereco.fun_cep);
 		printf("Logradouro :\n");
 		fflush(stdin);
 		gets(dados_fun.fun_endereco.fun_local);
-		printf("N∞ casa :\n");
+		printf("N¬∞ casa :\n");
 		scanf("%d", &dados_fun.fun_endereco.fun_casa);
 		printf("Bairro :\n");
 		fflush(stdin);
@@ -505,16 +505,16 @@ void CADASTRA_FUNCIONARIO()
 		printf("********** Cadastro Realizado com Sucesso **********\n");
 		printf("****************************************************\n\n");
 		printf("\n");
-		printf("Codigo do Funcion·rio: %d\n",dados_fun.fun_codigo);
+		printf("Codigo do Funcion√°rio: %d\n",dados_fun.fun_codigo);
 		printf("Cargo: %s\n",dados_fun.fun_cargo);
 		printf("Nome: %s\n",dados_fun.fun_nome);
 		printf("CPF: %s\n",dados_fun.fun_cpf);
 		printf("Data de Nascimento: %d/%d/%d\n",dados_fun.fun_nasc.fun_dia,dados_fun.fun_nasc.fun_mes,dados_fun.fun_nasc.fun_ano);
 		printf("Telefone: %s\n",dados_fun.fun_ctt);
-		printf("\n\n:----- EndereÁo do Funcion·rio -----: \n\n");
+		printf("\n\n:----- Endere√ßo do Funcion√°rio -----: \n\n");
 		printf("Cep: %d\n",dados_fun.fun_endereco.fun_cep);
 		printf("Logradouro: %s\n",dados_fun.fun_endereco.fun_local);
-		printf("N∞ casa: %d\n",dados_fun.fun_endereco.fun_casa);
+		printf("N¬∞ casa: %d\n",dados_fun.fun_endereco.fun_casa);
 		printf("Bairro: %s\n",dados_fun.fun_endereco.fun_bairro);
 		printf("Cidade: %s\n",dados_fun.fun_endereco.fun_cidade);
 		printf("Estado: %s\n",dados_fun.fun_endereco.fun_estado);
@@ -533,9 +533,9 @@ void CONSULTA_DADOS()
 	int consulta;
 	do
 	{
-		printf("Tecle na opÁ„o de (1 ‡ 4):\n");
+		printf("Tecle na op√ß√£o de (1 √† 4):\n");
 		printf("[1]. Consultar Conta:\n");
-		printf("[2]. Consultar Funcion·rio:\n");
+		printf("[2]. Consultar Funcion√°rio:\n");
 		printf("[3]. Cosultar Dados\n");
 		printf("[4]. Voltar\n");
 		scanf("%d",&consulta);
@@ -552,12 +552,12 @@ void CONSULTA_DADOS()
 			case 4:MENU_FUNCIONARIO();				
 				break;
 			default:
-				printf("OpÁ„o inv·lida!\n");
+				printf("Op√ß√£o inv√°lida!\n");
 				break;			
 		}		
 	}while(consulta!=4);
 }
-//ESSA FUN«AO E PARA CONSULTAR CLIENTE CORRENTE
+//ESSA FUN√áAO E PARA CONSULTAR CLIENTE CORRENTE
 void CONSULTA_CONTA()
 {
 	char nome_cliente[50];
@@ -591,7 +591,7 @@ void CONSULTA_CONTA()
 				printf("\n\n--------------------------------\n\n");							
 			}
 			else
-				printf("Cliente n„o encontrado!\n");
+				printf("Cliente n√£o encontrado!\n");
 		}		
 	}
 	fclose(arquivo_corrente);
@@ -603,7 +603,7 @@ void CONSULTA_FUNCIONARIO()
 	char nomo_func[50];
 	FILE* arquivo_funcionario;
 	struct DADOS_FUN dados_fun;
-	arquivo_funcionario=fopen("arquivo_funcionario.txt","r");//apende modo binario abre uma arquivo novo se n„o existir caso exista ele adiciona no final do arquivo.
+	arquivo_funcionario=fopen("arquivo_funcionario.txt","r");//apende modo binario abre uma arquivo novo se n√£o existir caso exista ele adiciona no final do arquivo.
 	if(arquivo_funcionario==NULL)
 	{
 		printf("Erro na abertura do arquivo!\n");
@@ -618,18 +618,18 @@ void CONSULTA_FUNCIONARIO()
 			{
 				system("cls");
 				printf("*******************************************\n");
-				printf("********** Consulta Funcion·rio ***********\n");
+				printf("********** Consulta Funcion√°rio ***********\n");
 				printf("*******************************************\n\n");
 				printf("\n");
-				printf("Codigo do Funcion·rio: %d\n",dados_fun.fun_codigo);
+				printf("Codigo do Funcion√°rio: %d\n",dados_fun.fun_codigo);
 				printf("Cargo: %s\n",dados_fun.fun_cargo);
 				printf("Nome: %s\n",dados_fun.fun_nome);			
 				printf("CPF: %s\n",dados_fun.fun_cpf);
 				printf("Data de Nascimento: %d/%d/%d\n",dados_fun.fun_nasc.fun_dia,dados_fun.fun_nasc.fun_mes,dados_fun.fun_nasc.fun_ano);
 				printf("Telefone: %s\n",dados_fun.fun_ctt);
-				printf("\n\n:----- EndereÁo do Funcion·rio -----: \n\n");								
+				printf("\n\n:----- Endere√ßo do Funcion√°rio -----: \n\n");								
 				printf("Logradouro: %s\n",dados_fun.fun_endereco.fun_local);
-				printf("N∞ casa: %d\n",dados_fun.fun_endereco.fun_casa);
+				printf("N¬∞ casa: %d\n",dados_fun.fun_endereco.fun_casa);
 				printf("Cep: %d\n",dados_fun.fun_endereco.fun_cep);
 				printf("Bairro: %s\n",dados_fun.fun_endereco.fun_bairro);
 				printf("Cidade: %s\n",dados_fun.fun_endereco.fun_cidade);
@@ -640,7 +640,7 @@ void CONSULTA_FUNCIONARIO()
 				system("cls");	
 			}
 			else
-				printf("Cliente n„o encontrado!\n");
+				printf("Cliente n√£o encontrado!\n");
 		}
 		fclose(arquivo_funcionario);				
 		MENU_FUNCIONARIO();
@@ -651,7 +651,7 @@ void CONSULTA_POUPANCA()
 	char nome_cp[50];
 	FILE* arquivo_poupanca;
 	struct REGISTRO_POUPANCA registro_cp;
-	arquivo_poupanca=fopen("arquivo_poupanca.txt","r");//apende modo binario abre uma arquivo novo se n„o existir caso exista ele adiciona no final do arquivo.
+	arquivo_poupanca=fopen("arquivo_poupanca.txt","r");//apende modo binario abre uma arquivo novo se n√£o existir caso exista ele adiciona no final do arquivo.
 	if(arquivo_poupanca==NULL)
 	{
 		printf("Erro na abertura do arquivo!\n");
@@ -666,7 +666,7 @@ void CONSULTA_POUPANCA()
 			{
 				system("cls");
 				printf("*********************************************\n");
-				printf("********** Consulta Conta poupanÁa **********\n");
+				printf("********** Consulta Conta poupan√ßa **********\n");
 				printf("*********************************************\n\n");
 				printf("\n");
 				printf("Nome: %s\n", registro_cp.nome_cp);
@@ -674,7 +674,7 @@ void CONSULTA_POUPANCA()
       			printf("Data de Nascimento: %2d/%2d/%4d\n", registro_cp.data_cp.dia_cp, registro_cp.data_cp.mes_cp, registro_cp.data_cp.ano_cp);
         		printf("Contato: %s\n", registro_cp.contato_cp);
         		printf("Logradouro: %s\n", registro_cp.endereco_cp.local_cp);
-        		printf("N∞ casa: %d\n", registro_cp.endereco_cp.num_casa_cp);
+        		printf("N¬∞ casa: %d\n", registro_cp.endereco_cp.num_casa_cp);
         		printf("Bairro: %s\n", registro_cp.endereco_cp.bairro_cp);
         		printf("Cidade: %s\n", registro_cp.endereco_cp.cidade_cp);
         		printf("Estado: %s\n", registro_cp.endereco_cp.estado_cp);
@@ -693,9 +693,9 @@ void ALTERA_DADOS()
 	int atd;//Variavel (ALTERA DADOS).
 	do 
 	{
-		printf("Tecle a opÁ„o desejada [1 a 4]:\n");
+		printf("Tecle a op√ß√£o desejada [1 a 4]:\n");
 		printf("[1]. Alterar Conta\n");		
-		printf("[2]. Alterar Funcion·rio\n");
+		printf("[2]. Alterar Funcion√°rio\n");
 		printf("[3]. Alterar Cliente\n");
 		printf("[4]. Voltar\n");
 		scanf("%d",&atd);
@@ -711,7 +711,7 @@ void ALTERA_DADOS()
 			case 4: MENU_FUNCIONARIO();
 				break;
 			default:
-				printf("OpÁ„o inv·lida[1 a 4]!\n");				
+				printf("Op√ß√£o inv√°lida[1 a 4]!\n");				
 		}			
 	}
 	while(atd!=4);
@@ -741,7 +741,7 @@ void ALTERA_CONTA()
             fflush(stdin); 
             gets(n_c);
             int cliente_encontrado = 0;
-            long contador = 0; // Vari·vel para rastrear a posiÁ„o do registro
+            long contador = 0; // Vari√°vel para rastrear a posi√ß√£o do registro
             while (fread(&registro_cc, sizeof(struct REGISTRO_CORRENTE), 1, arquivo_corrente) == 1) {
                 if (strcmp(n_c, registro_cc.nome_cc) == 0) {
                     cliente_encontrado = 1;
@@ -749,7 +749,7 @@ void ALTERA_CONTA()
                     printf("Digite o novo tipo de conta:\n");
                     fflush(stdin);
                     gets(registro_cc.tipo_conta_cc);
-                    printf("Novo limite DisponÌvel:\n");
+                    printf("Novo limite Dispon√≠vel:\n");
                     scanf("%f", &registro_cc.limite_cc);
                     printf("Nova data de vencimento (dd mm aaaa):\n");
                     scanf("%d", &registro_cc.venci_cc.venc_dia);
@@ -771,7 +771,7 @@ void ALTERA_CONTA()
                 contador++;
             }
             if (registro_cc.nome_cc!=cliente_encontrado) {
-                printf("Cliente n„o encontrado!\n");
+                printf("Cliente n√£o encontrado!\n");
             }
         }
         fclose(arquivo_corrente);
@@ -795,13 +795,13 @@ void ALTERA_FUNCIONARIO()
 	if(sadm==321)
 	{
 		printf("*****************************************\n");
-		printf("********** Alterar Funcion·rio **********\n");
+		printf("********** Alterar Funcion√°rio **********\n");
 		printf("*****************************************\n\n");
 		printf("\n");
 		char n_f[50];
 		FILE* arquivo_funcionario;
 		struct DADOS_FUN dados_fun;
-		arquivo_funcionario=fopen("arquivo_funcionario.txt","rb+");//apende modo binario abre uma arquivo novo se n„o existir caso exista ele adiciona no final do arquivo.
+		arquivo_funcionario=fopen("arquivo_funcionario.txt","rb+");//apende modo binario abre uma arquivo novo se n√£o existir caso exista ele adiciona no final do arquivo.
 		if(arquivo_funcionario==NULL)
 		{
 			printf("Erro na abertura do arquivo!\n");
@@ -812,7 +812,7 @@ void ALTERA_FUNCIONARIO()
             fflush(stdin); // Limpar o buffer de entrada
             gets(n_f);
             int cl_encont = 0;
-            long contado = 0; // Vari·vel para rastrear a posiÁ„o do registro
+            long contado = 0; // Vari√°vel para rastrear a posi√ß√£o do registro
 			while(fread(& dados_fun,sizeof(struct DADOS_FUN),1,arquivo_funcionario)==1)
 			{
 				if(strcmp(n_f,dados_fun.fun_nome)==0)
@@ -820,7 +820,7 @@ void ALTERA_FUNCIONARIO()
 					cl_encont=1;
 					fflush(stdin);
 					printf("\n");
-					printf("Novo codigo do funcion·rio: \n");
+					printf("Novo codigo do funcion√°rio: \n");
 					scanf("%d",&dados_fun.fun_codigo);
 					printf("Novo cargo: \n");
 					fflush(stdin);
@@ -831,7 +831,7 @@ void ALTERA_FUNCIONARIO()
 					printf("Novo logradouro: \n");
 					fflush(stdin);
 					gets(dados_fun.fun_endereco.fun_local);
-					printf("N˙mero da casa: \n");
+					printf("N√∫mero da casa: \n");
 					scanf("%d",&dados_fun.fun_endereco.fun_casa);
 					printf("Novo Cep: \n");
 					scanf("d",&dados_fun.fun_endereco.fun_cep);
@@ -852,11 +852,11 @@ void ALTERA_FUNCIONARIO()
                     printf("********** Alterado com sucesso **********\n");
                     printf("******************************************\n\n");
                     printf("\n");
-					printf("Codigo do Funcion·rio: %d\n",dados_fun.fun_codigo);
+					printf("Codigo do Funcion√°rio: %d\n",dados_fun.fun_codigo);
 					printf("Cargo: %s\n",dados_fun.fun_cargo);
 					printf("Telefone: %s\n",dados_fun.fun_ctt);
 					printf("Logradouro: %s\n",dados_fun.fun_endereco.fun_local);
-					printf("N∞ casa: %d\n",dados_fun.fun_endereco.fun_casa);
+					printf("N¬∞ casa: %d\n",dados_fun.fun_endereco.fun_casa);
 					printf("Cep: %d\n",dados_fun.fun_endereco.fun_cep);
 					printf("Bairro: %s\n",dados_fun.fun_endereco.fun_bairro);
 					printf("Cidade: %s\n",dados_fun.fun_endereco.fun_cidade);
@@ -867,7 +867,7 @@ void ALTERA_FUNCIONARIO()
 			}
 			if(dados_fun.fun_nome!=cl_encont)
 			{
-				printf("Cliente n„o encontrado!\n");
+				printf("Cliente n√£o encontrado!\n");
 			}
 		}
 		fclose(arquivo_funcionario);
@@ -897,7 +897,7 @@ void ALTERA_CLIENTE()
 		char n_p[50];
 		FILE* arquivo_poupanca;
 		struct REGISTRO_POUPANCA registro_cp;
-		arquivo_poupanca=fopen("arquivo_poupanca.txt","rb+");//apende modo binario abre uma arquivo novo se n„o existir caso exista ele adiciona no final do arquivo.
+		arquivo_poupanca=fopen("arquivo_poupanca.txt","rb+");//apende modo binario abre uma arquivo novo se n√£o existir caso exista ele adiciona no final do arquivo.
 		if(arquivo_poupanca==NULL)
 		{
 			printf("Erro na abertura do arquivo!\n");
@@ -921,7 +921,7 @@ void ALTERA_CLIENTE()
             		printf("Novo logradouro:\n");
             		fflush(stdin);
             		gets(registro_cp.endereco_cp.local_cp);            		
-            		printf("Alterar n˙mero da casa:\n");
+            		printf("Alterar n√∫mero da casa:\n");
             		scanf("%d",registro_cp.endereco_cp.num_casa_cp);
             		printf("Alterar Cep:\n");
             		scanf("%d",registro_cp.endereco_cp.cep_cp);
@@ -943,7 +943,7 @@ void ALTERA_CLIENTE()
                     printf("\n");
 					printf("Contato: %s\n", registro_cp.contato_cp);
 					printf("Logradouro: %s\n", registro_cp.endereco_cp.local_cp);
-					printf("N∞ casa: %d\n", registro_cp.endereco_cp.num_casa_cp);
+					printf("N¬∞ casa: %d\n", registro_cp.endereco_cp.num_casa_cp);
 					printf("Cep: %d\n", registro_cp.endereco_cp.cep_cp);
 					printf("Bairro: %s\n", registro_cp.endereco_cp.bairro_cp);
 					printf("Cidade: %s\n", registro_cp.endereco_cp.cidade_cp); 
@@ -954,7 +954,7 @@ void ALTERA_CLIENTE()
 			}
 			if(registro_cp.nome_cp!=registro_cp.nome_cp)
 			{
-				printf("Cliente n„o encontrado!\n");
+				printf("Cliente n√£o encontrado!\n");
 			}
 		}
 		fclose(arquivo_poupanca);
@@ -984,8 +984,8 @@ void EXCLUIR()
 		int n;
 		do
 		{
-			printf("Tecle a opÁ„o desejada:\n");
-			printf("[1]. Conta PoupanÁa\n");
+			printf("Tecle a op√ß√£o desejada:\n");
+			printf("[1]. Conta Poupan√ßa\n");
 			printf("[2]. Conta Corrente\n");
 			printf("[3]. Voltar\n");
 			scanf("%d",&n);
@@ -994,7 +994,7 @@ void EXCLUIR()
 			{
 				case 1:
 					printf("*******************************************\n");
-					printf("********** Exluir Conta PoupanÁa **********\n");
+					printf("********** Exluir Conta Poupan√ßa **********\n");
 					printf("*******************************************\n\n");
 					printf("\n");
 					FILE* arquivo_poupanca;
@@ -1072,7 +1072,7 @@ void EXCLUIR()
 				case 3:MENU_FUNCIONARIO();	
 					break;	
 					default:
-					printf("OpÁ„o inv·lida (1 ou 3):");	
+					printf("Op√ß√£o inv√°lida (1 ou 3):");	
 					break;					
 			}
 		}
@@ -1081,7 +1081,7 @@ void EXCLUIR()
 		system("cls");	
 	}
 	else
-	printf("Senha inv·lida!\n");
+	printf("Senha inv√°lida!\n");
 }
 void GERAR_RELATORIO() 
 {
@@ -1129,7 +1129,7 @@ void GERAR_RELATORIO()
         fclose(arquivo_corrente);
         fclose(relatorio_cc);
         printf("***************************************************\n");
-        printf("********** RelatÛrio Gerado Com Sucesso  **********\n");
+        printf("********** Relat√≥rio Gerado Com Sucesso  **********\n");
         printf("***************************************************\n\n");
     }
     else
@@ -1144,9 +1144,9 @@ void MENU_CLIENTE()
 	int op_cli;
 	do
 	{
-		printf("Tecle a opÁ„o desejada: \n");
+		printf("Tecle a op√ß√£o desejada: \n");
 		printf("[1]. Saldo\n");
-		printf("[2]. DepÛsito\n");
+		printf("[2]. Dep√≥sito\n");
 		printf("[3]. Saque\n");
 		printf("[4]. Extrato\n");
 		printf("[5]. Consultar Limite\n");
@@ -1168,7 +1168,7 @@ void MENU_CLIENTE()
 			case 6:MENU_PRINCIPAL();
 				break;
 			default:
-				printf("INVALIDO. Tecle na opÁ„o (1 a 6):\n");					
+				printf("INVALIDO. Tecle na op√ß√£o (1 a 6):\n");					
 		}
 	}
 	while(op_cli!=7);
@@ -1210,7 +1210,7 @@ void SALDO()
 void DEPOSITO()
 {
     printf("******************************\n");
-    printf("********** DepÛsito **********\n");
+    printf("********** Dep√≥sito **********\n");
     printf("******************************\n\n");
     printf("\n");
     char n_c[50];
@@ -1222,7 +1222,7 @@ void DEPOSITO()
         printf("Erro na abertura do arquivo!\n");
     }
 
-    printf("Digite o nome do cliente que deseja fazer o depÛsito:\n");
+    printf("Digite o nome do cliente que deseja fazer o dep√≥sito:\n");
     fflush(stdin); 
     gets(n_c);
 
@@ -1234,7 +1234,7 @@ void DEPOSITO()
         {
             cliente_encontrado = 1;
             float valor_deposito = 0;
-            printf("Digite o valor do depÛsito:\n");
+            printf("Digite o valor do dep√≥sito:\n");
             scanf("%f", &valor_deposito);
 
             registro_cc.saldo_cc += valor_deposito;
@@ -1248,7 +1248,7 @@ void DEPOSITO()
                 struct TRANSACAO transacao;
                 strcpy(transacao.tipo, "Deposito");
                 transacao.valor = valor_deposito;
-                strcpy(transacao.data, "16/06/2024"); // Aqui vocÍ pode usar uma funÁ„o para obter a data atual
+                strcpy(transacao.data, "16/06/2024"); // Aqui voc√™ pode usar uma fun√ß√£o para obter a data atual
 
                 fwrite(&transacao, sizeof(struct TRANSACAO), 1, arquivo_transacoes);
                 fclose(arquivo_transacoes);
@@ -1256,7 +1256,7 @@ void DEPOSITO()
 
             system("cls");
             printf("****************************************************\n");
-            printf("********** DepÛsito realizado com sucesso **********\n");
+            printf("********** Dep√≥sito realizado com sucesso **********\n");
             printf("****************************************************\n\n");
             printf("\n");
             printf("Nome do cliente: %s\n", registro_cc.nome_cc);
@@ -1268,7 +1268,7 @@ void DEPOSITO()
 
     if (!cliente_encontrado) 
     {
-        printf("Cliente n„o encontrado!\n");
+        printf("Cliente n√£o encontrado!\n");
     }
 
     fclose(arquivo_corrente);
@@ -1315,7 +1315,7 @@ void SAQUE()
                     struct TRANSACAO transacao;
                     strcpy(transacao.tipo, "Saque");
                     transacao.valor = valor_saque;
-                    strcpy(transacao.data, "2024-06-16"); // Aqui vocÍ pode usar uma funÁ„o para obter a data atual
+                    strcpy(transacao.data, "2024-06-16"); // Aqui voc√™ pode usar uma fun√ß√£o para obter a data atual
 
                     fwrite(&transacao, sizeof(struct TRANSACAO), 1, arquivo_transacoes);
                     fclose(arquivo_transacoes);
@@ -1340,7 +1340,7 @@ void SAQUE()
 
     if (!cliente_encontrado) 
     {
-        printf("Cliente n„o encontrado!\n");
+        printf("Cliente n√£o encontrado!\n");
     }
 
     fclose(arquivo_corrente);
@@ -1379,7 +1379,7 @@ void EXTRATO()
             FILE *arquivo_transacoes = fopen("transacoes.txt", "rb");
             if (arquivo_transacoes == NULL)
             {
-                printf("Erro ao abrir o arquivo de transaÁıes.\n");
+                printf("Erro ao abrir o arquivo de transa√ß√µes.\n");
                 fclose(arquivo_corrente);
                 fclose(extrato_corrente);
                 return;
@@ -1387,9 +1387,9 @@ void EXTRATO()
 
             struct TRANSACAO transacao;
             fprintf(extrato_corrente, "CONTA-CORRENTE\n");
-            fprintf(extrato_corrente, "N∞ da Conta:  %d \n", registro_corrente.num_conta_cc);
+            fprintf(extrato_corrente, "N¬∞ da Conta:  %d \n", registro_corrente.num_conta_cc);
             printf("CONTA-CORRENTE \n");
-            printf("N∞ da Conta: %d \n", registro_corrente.num_conta_cc);
+            printf("N¬∞ da Conta: %d \n", registro_corrente.num_conta_cc);
 
             while (fread(&transacao, sizeof(struct TRANSACAO), 1, arquivo_transacoes) == 1) 
             {
@@ -1412,175 +1412,6 @@ void EXTRATO()
     fclose(extrato_corrente);
     getch();
 }
-	
-/*void DEPOSITO()
-{
-	printf("******************************\n");
-    printf("********** DepÛsito **********\n");
-    printf("******************************\n\n");
-    printf("\n");
-    char n_c[50];
-    FILE *arquivo_corrente;
-    struct REGISTRO_CORRENTE registro_cc;
-    // Abre o arquivo corrente em modo de leitura e escrita bin·ria
-    arquivo_corrente = fopen("arquivo_corrente.txt", "rb+");
-    if (arquivo_corrente == NULL) 
-	{
-        printf("Erro na abertura do arquivo!\n");
-    }
-    // Solicita o nome do cliente   
-    printf("Digite o nome do cliente que deseja fazer o depÛsito:\n");
-    fflush(stdin); // Limpa o buffer de entrada
-    gets(n_c);
-    // Vari·veis para controle
-    int cliente_encontrado = 0;
-    long contador = 0; // Vari·vel para rastrear a posiÁ„o do registro
-    // Itera sobre os registros de conta corrente
-    while (fread(&registro_cc, sizeof(struct REGISTRO_CORRENTE), 1, arquivo_corrente) == 1) 
-	{
-        // Se encontrar o cliente
-        if (strcmp(n_c, registro_cc.nome_cc) == 0) 
-		{
-            cliente_encontrado = 1;
-            // Solicita o valor do depÛsit
-            float valor_deposito=0;
-            printf("Digite o valor do depÛsito:\n");
-            scanf("%f",&valor_deposito);
-            registro_cc.valor_deposito = valor_deposito;
-            registro_cc.saldo_cc += valor_deposito;
-            // Atualiza o registro no arquivo
-            fseek(arquivo_corrente, contador * sizeof(struct REGISTRO_CORRENTE), SEEK_SET);
-            fwrite(&registro_cc, sizeof(struct REGISTRO_CORRENTE), 1, arquivo_corrente);
-            // Exibe mensagem de sucesso e informaÁıes atualizadas
-            system("cls");
-            printf("****************************************************\n");
-            printf("********** DepÛsito realizado com sucesso **********\n");
-            printf("****************************************************\n\n");
-            printf("\n");
-            printf("Nome do cliente: %s\n", registro_cc.nome_cc);
-            printf("Saldo: %.2f\n\n\n", registro_cc.saldo_cc);
-            break;
-        }
-        contador++;
-    }
-    // Se o cliente n„o for encontrado
-    if (!cliente_encontrado) 
-	{
-        printf("Cliente n„o encontrado!\n");
-    }
-    // Fecha o arquivo corrente
-    fclose(arquivo_corrente);
-}*/ 
-/*void SAQUE()
-{
-	printf("***************************\n");
-    printf("********** Saque **********\n");
-    printf("***************************\n\n");
-    printf("\n");
-    char n_c[50];    
-    FILE *arquivo_corrente;
-    struct REGISTRO_CORRENTE registro_cc;
-    // Abre o arquivo corrente em modo de leitura e escrita bin·ria
-    arquivo_corrente = fopen("arquivo_corrente.txt", "rb+");
-    if (arquivo_corrente == NULL) 
-	{
-        printf("Erro na abertura do arquivo!\n");
-    }
-    // Solicita o nome do cliente   
-    printf("Digite o nome do cliente:\n");
-    fflush(stdin); // Limpa o buffer de entrada
-    gets(n_c);
-    // Vari·veis para controle
-    int cliente_encontrado = 0;
-    long contador = 0; // Vari·vel para rastrear a posiÁ„o do registro
-    // Itera sobre os registros de conta corrente
-    while (fread(&registro_cc, sizeof(struct REGISTRO_CORRENTE), 1, arquivo_corrente) == 1) 
-	{
-        // Se encontrar o cliente
-        if (strcmp(n_c, registro_cc.nome_cc) == 0) 
-		{
-            cliente_encontrado = 1;
-            // Solicita o valor do depÛsito
-            float valor_saque=0;
-            printf("Digite o valor do Saque:\n");
-            scanf("%f", &valor_saque);
-            if(valor_saque<=registro_cc.saldo_cc)
-            {
-            	// Realiza o saque
-            registro_cc.valor_saque = valor_saque;
-            registro_cc.saldo_cc -= valor_saque;
-            // Atualiza o registro no arquivo
-            fseek(arquivo_corrente, contador * sizeof(struct REGISTRO_CORRENTE), SEEK_SET);
-            fwrite(&registro_cc, sizeof(struct REGISTRO_CORRENTE), 1, arquivo_corrente);
-            // Exibe mensagem de sucesso e informaÁıes atualizadas
-            system("cls");
-            printf("*************************************************\n");
-            printf("********** Saque realizado com sucesso **********\n");
-            printf("*************************************************\n\n");
-            printf("\n");
-            printf("Nome do cliente: %s\n", registro_cc.nome_cc);
-            printf("Saldo: %.2f\n\n\n", registro_cc.saldo_cc);
-            break;
-			}
-			else 
-				printf("Saldo insuficiente!\n");            
-        }
-        contador++;
-    }
-    // Se o cliente n„o for encontrado
-    if (!cliente_encontrado) 
-	{
-        printf("Cliente n„o encontrado!\n");
-    }
-    // Fecha o arquivo corrente
-    fclose(arquivo_corrente);
-}*/ 
-/*void EXTRATO()
-{
-	printf("****************************\n");
-    printf("********** Extrato *********\n");
-    printf("****************************\n\n");
-    printf("\n");
-    char nome_corrente[50];
-    struct REGISTRO_CORRENTE registro_corrente;
-	FILE *arquivo_corrente;
-	FILE *extrato_corrente;	
-	arquivo_corrente = fopen("arquivo_corrente.txt", "rb");
-    if (arquivo_corrente == NULL) 
-	{
-        printf("Erro ao abrir o arquivo.\n");
-    }
-    extrato_corrente=fopen("extrato_corrente.csv","w");
-    if(extrato_corrente==NULL)
-    {
-    	printf("ERRO AO CRIAR O ARQUIVO EXTRATO\n");
-		fclose(arquivo_corrente);  	
-	}
-	printf("Digite o nome do cliente a ser consultada: \n");
-    fflush(stdin);
-    gets(nome_corrente);	
-	while (fread(&registro_corrente, sizeof(struct REGISTRO_CORRENTE), 1, arquivo_corrente) == 1) 
-	{
-        if (strcmp(nome_corrente, registro_corrente.nome_cc) == 0) 
-		{
-			fprintf(extrato_corrente,"CONTA-CORRENTE\n");
-			fprintf(extrato_corrente,"N∞ da Conta:  %d \n",registro_corrente.num_conta_cc);
-			fprintf(extrato_corrente,"Deposito: %.2f \n",registro_corrente.valor_deposito);
-			fprintf(extrato_corrente,"Saque:  %.2f \n",registro_corrente.valor_saque);
-			fprintf(extrato_corrente,"Saldo: %.2f \n",registro_corrente.saldo_cc);
-			fprintf(extrato_corrente,"\n---------------------------------------------------\n\n");
-			printf("CONTA-CORRENTE \n");
-			printf("N∞ da Conta: %d \n",registro_corrente.num_conta_cc);
-			printf("Deposito: %.2f \n",registro_corrente.valor_deposito);
-			printf("Saque:  %.2f \n",registro_corrente.valor_saque);
-			printf("Saldo: %.2f \n",registro_corrente.saldo_cc);
-			printf("\n---------------------------------------------------\n\n");	
-		}
-	}
-	fclose(arquivo_corrente);
-	fclose(extrato_corrente);
-	getch();
-}*/
 void CONSULTA_LIMITE()
 {
 	printf("*************************************************\n");
